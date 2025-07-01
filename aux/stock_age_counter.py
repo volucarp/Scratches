@@ -107,16 +107,15 @@ def compute_position_age(dollar_position: pd.Series, total_return: pd.Series) ->
 
 
 ## Run test Cases
+if __name__ == "__main__":
+    import pandas as pd
+    import numpy as np
 
+    # Sample data
+    dates = pd.date_range(start="2023-01-01", periods=3)
+    dollar_position = pd.Series([1000, 1100, 1200], index=dates)
+    total_return = pd.Series([0.0, 0.1, 0.05], index=dates)
 
-import pandas as pd
-import numpy as np
-
-# Sample data
-dates = pd.date_range(start="2023-01-01", periods=3)
-dollar_position = pd.Series([1000, 1100, 1200], index=dates)
-total_return = pd.Series([0.0, 0.1, 0.05], index=dates)
-
-# Compute position age
-age_series = compute_position_age(dollar_position, total_return)
-print(age_series)
+    # Compute position age
+    age_series = compute_position_age(dollar_position, total_return)
+    print(age_series)

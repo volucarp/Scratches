@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aux"
+version = "0.1.0"
+description = "Auxiliary Python package"
+authors = [{name = "My_Name", email = "mep-23452-sdfs@icloud.com"}]
+dependencies = [
+    "pytest"
+]
+
+[tool.pytest.ini_options]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
